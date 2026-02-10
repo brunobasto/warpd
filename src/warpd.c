@@ -252,7 +252,6 @@ int main(int argc, char *argv[])
 				break;
 			case 'q':
 				mode = MODE_HINTSPEC;
-				oneshot_flag = 1;
 				break;
 			case 257:
 				mode = MODE_HINT;
