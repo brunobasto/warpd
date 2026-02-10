@@ -20,7 +20,10 @@ int mode_loop(int initial_mode, int oneshot, int record_history)
 			break;
 		case MODE_HINTSPEC:
 			hintspec_mode();
-			break;
+			ev = NULL;
+			mode = MODE_NORMAL;
+			oneshot = 1;
+			continue;
 		case MODE_NORMAL:
 			ev = normal_mode(ev, oneshot);
 
