@@ -141,6 +141,8 @@ static int click_flag = 0;
 static int x_flag = -1;
 static int y_flag = -1;
 static int record_flag = 0;
+static int query_flag = 0;
+static int normal_flag = 0;
 static int mode = 0;
 
 /* Platform entry points. */
@@ -251,6 +253,7 @@ int main(int argc, char *argv[])
 				foreground = 1;
 				break;
 			case 'q':
+				query_flag = 1;
 				mode = MODE_HINTSPEC;
 				oneshot_flag = 1;
 				break;
@@ -261,6 +264,7 @@ int main(int argc, char *argv[])
 				mode = MODE_GRID;
 				break;
 			case 259:
+				normal_flag = 1;
 				mode = MODE_NORMAL;
 				break;
 			case 261:
@@ -298,6 +302,12 @@ int main(int argc, char *argv[])
 			case '?':
 				return -1;
 		}
+	}
+
+	/* --query --normal: hint selection then enter normal mode */
+	if (query_flag && normal_flag) {
+		mode = MODE_HINTSPEC;
+		oneshot_flag = 0;
 	}
 
 	if (mode || oneshot_flag) {

@@ -19,7 +19,14 @@ int mode_loop(int initial_mode, int oneshot, int record_history)
 			mode = MODE_NORMAL;
 			break;
 		case MODE_HINTSPEC:
-			hintspec_mode();
+			if (hintspec_mode() < 0)
+				goto exit;
+
+			if (!oneshot) {
+				ev = NULL;
+				mode = MODE_NORMAL;
+				continue;
+			}
 			break;
 		case MODE_NORMAL:
 			ev = normal_mode(ev, oneshot);
