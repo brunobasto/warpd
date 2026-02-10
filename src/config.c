@@ -96,6 +96,7 @@ static struct {
 
 	{ "hint_size", "20", "Hint size (range: 1-1000)", OPT_INT },
 	{ "hint_border_radius", "3", "Border radius.", OPT_INT },
+	{ "hint_border_color", "", "Hint border/outline color (rgba hex value, empty to disable).", OPT_STRING },
 
 	{ "hint_exit", "esc", "The exit key used for hint mode.", OPT_KEY },
 	{ "hint_undo", "backspace", "undo last selection step in one of the hint based modes.", OPT_KEY },

@@ -232,7 +232,8 @@ void init_hints()
 	platform->init_hint(config_get("hint_bgcolor"),
 			    config_get("hint_fgcolor"),
 			    config_get_int("hint_border_radius"),
-			    config_get("hint_font"));
+			    config_get("hint_font"),
+			    config_get("hint_border_color"));
 }
 
 int hintspec_mode()

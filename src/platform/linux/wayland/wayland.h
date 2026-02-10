@@ -119,7 +119,7 @@ void way_screen_get_dimensions(screen_t scr, int *w, int *h);
 void way_screen_draw_box(screen_t scr, int x, int y, int w, int h, const char *color);
 void way_screen_clear(screen_t scr);
 void way_screen_list(screen_t scr[MAX_SCREENS], size_t *n);
-void way_init_hint(const char *bg, const char *fg, int border_radius, const char *font_family);
+void way_init_hint(const char *bg, const char *fg, int border_radius, const char *font_family, const char *border_color);
 void way_hint_draw(struct screen *scr, struct hint *hints, size_t n);
 void way_scroll(int direction);
 void way_copy_selection();

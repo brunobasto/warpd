@@ -134,7 +134,7 @@ static struct input_event *input_next_event(int timeout)
 	}
 }
 
-static void init_hint(const char *bg, const char *fg, int border_radius, const char *font_family)
+static void init_hint(const char *bg, const char *fg, int border_radius, const char *font_family, const char *border_color)
 {
 	//TODO: handle font family and border radius.
 	wn_screen_set_hintinfo(str_to_colorref(bg), str_to_colorref(fg));

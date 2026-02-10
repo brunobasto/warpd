@@ -117,7 +117,7 @@ void osx_screen_get_dimensions(screen_t scr, int *w, int *h);
 void osx_screen_draw_box(screen_t scr, int x, int y, int w, int h, const char *color);
 void osx_screen_clear(screen_t scr);
 void osx_screen_list(screen_t scr[MAX_SCREENS], size_t *n);
-void osx_init_hint(const char *bg, const char *fg, int border_radius, const char *font_family);
+void osx_init_hint(const char *bg, const char *fg, int border_radius, const char *font_family, const char *border_color);
 void osx_hint_draw(struct screen *scr, struct hint *hints, size_t n);
 void osx_scroll(int direction);
 void osx_copy_selection();

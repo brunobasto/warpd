@@ -194,7 +194,7 @@ void x_hint_draw(struct screen *scr, struct hint *hints, size_t n)
 }
 
 void x_init_hint(const char *bgcol, const char *fgcol, int _border_radius,
-		 const char *_font_family)
+		 const char *_font_family, const char *border_color)
 {
 	static int init = 0;
 	size_t i;

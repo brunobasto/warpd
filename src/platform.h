@@ -74,7 +74,7 @@ struct platform {
 	void (*screen_clear)(screen_t scr);
 	void (*screen_list)(screen_t scr[MAX_SCREENS], size_t *n);
 
-	void (*init_hint)(const char *bg, const char *fg, int border_radius, const char *font_family);
+	void (*init_hint)(const char *bg, const char *fg, int border_radius, const char *font_family, const char *border_color);
 
 	/* 
 	 * Modifications to files passed into this function will interrupt
